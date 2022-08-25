@@ -1,0 +1,9 @@
+
+^	java:S107S"BConstructor has 17 parameters, which is greater than 7 authorized.(çïúç8ÆÕ÷³ª0
+f	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çïúç
+O
+java:S1948&"-Make "addressList" transient or serializable.(‹»Øäøÿÿÿÿ8éÕ÷³ª0
+E
+java:S1948("(Make "filial" transient or serializable.(Ø°¿è8éÕ÷³ª0
+C
+java:S1948."&Make "role" transient or serializable.(âÈ»ú8êÕ÷³ª0

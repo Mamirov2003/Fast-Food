@@ -1,0 +1,17 @@
+
+U
+java:S1854.":Remove this useless assignment to local variable "qatdir".(Šıëøÿÿÿÿ
+W
+java:S1854-"<Remove this useless assignment to local variable "qattadir".(ğÃà«şÿÿÿÿ
+H
+java:S1481-"-Remove this unused "qattadir" local variable.(ğÃà«şÿÿÿÿ
+F
+java:S1481."+Remove this unused "qatdir" local variable.(Šıëøÿÿÿÿ
+P	java:S1253"<This block of commented-out lines of code should be removed.(ÿœÚL
+V	java:S125:"<This block of commented-out lines of code should be removed.(“£ ˜şÿÿÿÿ
+V	java:S125="<This block of commented-out lines of code should be removed.(Ê—ôªûÿÿÿÿ
+N
+java:S1128
+"1Remove this unused import 'java.text.DateFormat'.(÷Œá¼8”µ¹«0
+H
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8”µ¹«0
