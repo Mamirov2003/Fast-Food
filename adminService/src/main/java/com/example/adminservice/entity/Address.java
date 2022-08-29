@@ -22,8 +22,8 @@ public class Address extends AbsNameEntity {
     private Double lon;
     private String target;
 
-    public Address(Long id, String nameUz, String nameRu, Double lat, Double lon, String target) {
-        super(id, nameUz, nameRu);
+    public Address(Long id, String name, Double lat, Double lon, String target) {
+        super(id, name);
         this.lat = lat;
         this.lon = lon;
         this.target = target;

@@ -32,8 +32,8 @@ public class Notification  extends AbsNameEntity {
     private boolean hasBot; //true
     private Timestamp sendTime;
 
-    public Notification(Long id, String nameUz, String nameRu, User user, String title, String body, Attachment attachment, boolean hasBot, Timestamp sendTime) {
-        super(id, nameUz, nameRu);
+    public Notification(Long id, String name, User user, String title, String body, Attachment attachment, boolean hasBot, Timestamp sendTime) {
+        super(id, name);
         this.user = user;
         this.title = title;
         this.body = body;

@@ -33,7 +33,7 @@ public class Role extends AbsNameEntity {
 //        super(id, nameUz, nameRu, deleted, status);
 //    }
 
-    public Role(Long id, String nameUz, String nameRu) {
-        super(id, nameUz, nameRu);
+    public Role(Long id, String name) {
+        super(id, name);
     }
 }

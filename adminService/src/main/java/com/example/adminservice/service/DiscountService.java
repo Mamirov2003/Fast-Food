@@ -22,8 +22,7 @@ public class DiscountService {
     private final ProductRepository productRepository;
     public ApiResponse save(DiscountDto discountDto) {
         Discount discount = new Discount();
-        discount.setNameUz(discountDto.getNameUz());
-        discount.setNameRu(discountDto.getNameRu());
+        discount.setName(discountDto.getNameUz());
         discount.setPercentage(discountDto.getPercentage());
 
         List<Product> allById = new ArrayList<>();
@@ -72,8 +71,7 @@ public class DiscountService {
         }
 
         Discount discount = byId.get();
-        discount.setNameUz(discountDto.getNameUz());
-        discount.setNameRu(discountDto.getNameRu());
+        discount.setName(discountDto.getNameUz());
         discount.setPercentage(discountDto.getPercentage());
 
         List<Product> allById = new ArrayList<>();

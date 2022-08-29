@@ -27,8 +27,8 @@ public class FilialService {
 
     public ApiResponse save(FilialDto filialDto) {
         Filial filial = new Filial();
-        filial.setNameUz(filialDto.getNameUz());
-        filial.setNameRu(filialDto.getNameRu());
+        filial.setName(filialDto.getNameUz());
+
 
         //FilialDto da startTime va endTime HH:mm ko`rinishda yoziladi
         Date startTime = dateFormatUtil.dateConvertorTime(filialDto.getStartTime());
@@ -68,8 +68,7 @@ public class FilialService {
             return ApiResponse.builder().success(false).message("Noto`g`ri id kiritildi!").build();
         }
         Filial filial = byId.get();
-        filial.setNameUz(filialDto.getNameUz());
-        filial.setNameRu(filialDto.getNameRu());
+        filial.setName(filialDto.getNameUz());
 
         //FilialDto da startTime va endTime HH:mm ko`rinishda yoziladi
         Date startTime = dateFormatUtil.dateConvertorTime(filialDto.getStartTime());

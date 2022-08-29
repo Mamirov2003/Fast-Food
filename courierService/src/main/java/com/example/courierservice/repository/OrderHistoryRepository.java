@@ -4,6 +4,7 @@ import com.example.courierservice.entity.OrderHistory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 /**
  * @author "ISMOIL NIGMATOV"
@@ -11,5 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @project fast-food
  */
 public interface OrderHistoryRepository extends JpaRepository<OrderHistory,Long> {
-    Page<OrderHistory> findAllByCourier_Id(Long id,Pageable pageable);
+    @Query("select o from OrderHistory o where o.courier.id = ?1")
+    Page<OrderHistory> findAllByCourier_Id(Long id, Pageable pageable);
 }

@@ -5,6 +5,7 @@ import com.example.userservice.entity.*;
 import com.example.userservice.entity.enums.OrderStatus;
 import com.example.userservice.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.hql.internal.ast.tree.IsNullLogicOperatorNode;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -133,11 +135,11 @@ public class OrderService {
     public ApiResponse getAll(OrderStatus orderStatus,Long userId) {
         Pageable pageable=PageRequest.of(0,10);
         Page<Order> data=null;
-        if (orderStatus.equals(null)&&userId==0){//for Admin
+        if (Objects.isNull(orderStatus)&&Objects.isNull(userId)){//for Admin
             data = orderRepository.findAll(pageable);
-        } else if (!(userId == 0)) {
+        } else if (!(Objects.isNull(userId))) {
             data=orderRepository.findAllByUserId(userId,pageable);//For user
-        }
+        }else
         data=orderRepository.findAllByOrderStatus(orderStatus,pageable);//For Operator
         return ApiResponse.builder().success(true).message("There").data(toDTOPage(data)).build();
     }

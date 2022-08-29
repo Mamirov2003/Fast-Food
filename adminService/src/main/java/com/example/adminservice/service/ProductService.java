@@ -26,8 +26,7 @@ public class ProductService {
         String saved = "Saved!"; //biror narsa qo`shilmasa Xato bermasdan nima kam ekanini chiqarish uchun
 
         Product product = new Product();
-        product.setNameUz(productDto.getNameUz());
-        product.setNameRu(productDto.getNameRu());
+        product.setName(productDto.getNameUz());
         product.setPrice(productDto.getPrice());
         product.setDescription(productDto.getDescription());
 
@@ -94,8 +93,7 @@ public class ProductService {
         String saved = "Saved!";
 
         Product product = new Product();
-        product.setNameUz(productDto.getNameUz());
-        product.setNameRu(productDto.getNameRu());
+        product.setName(productDto.getNameUz());
         product.setPrice(productDto.getPrice());
         product.setDescription(productDto.getDescription());
 

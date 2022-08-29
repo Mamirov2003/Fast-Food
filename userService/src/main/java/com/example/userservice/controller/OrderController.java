@@ -52,8 +52,8 @@ public class OrderController {
 
     @GetMapping//feignClient operator
     //done
-    public ResponseEntity<?> getAllOrder(@RequestParam(defaultValue = "null",required = false) OrderStatus orderStatus,//todo
-                                         @RequestParam(defaultValue = "0",required = false) Long userId){
+    public ResponseEntity<?> getAllOrder(@RequestParam(required = false) OrderStatus orderStatus,
+                                         @RequestParam(required = false) Long userId){
         ApiResponse response=orderService.getAll(orderStatus,userId);
         return ResponseEntity.ok(response);
     }

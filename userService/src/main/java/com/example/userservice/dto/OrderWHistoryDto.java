@@ -1,5 +1,6 @@
 package com.example.userservice.dto;
 
+import com.example.userservice.entity.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,14 +10,16 @@ import java.sql.Timestamp;
 
 /**
  * @author "ISMOIL NIGMATOV"
- * @created 9:33 PM on 8/19/2022
+ * @created 6:59 PM on 8/26/2022
  * @project fast-food
  */
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class OrderHistoryDto {
-    private Long courierId;
-    private int reliability;
-    private String description;
+public class OrderWHistoryDto {
+    private OrderStatus orderStatus;
+    private Double price;
+    @CreationTimestamp
+    private Timestamp timestamp;
 }

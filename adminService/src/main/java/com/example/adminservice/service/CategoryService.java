@@ -21,8 +21,7 @@ public class CategoryService {
 
     public ApiResponse save(CategoryDto categoryDto) {
         Category category = new Category();
-        category.setNameUz(categoryDto.getNameUz());
-        category.setNameRu(categoryDto.getNameRu());
+        category.setName(categoryDto.getNameUz());
         if (categoryDto.getParentId()!=0){
             Optional<Category> byId = categoryRepository.findById(categoryDto.getParentId());
             if (!byId.isEmpty()) {
@@ -68,8 +67,7 @@ public class CategoryService {
             return ApiResponse.builder().success(false).message("Noto`g`ri id kiritildi!").build();
         }
         Category category = byId.get();
-        category.setNameUz(categoryDto.getNameUz());
-        category.setNameRu(categoryDto.getNameRu());
+        category.setName(categoryDto.getNameUz());
 
         if (categoryDto.getParentId()!=0){
             Optional<Category> byId2 = categoryRepository.findById(categoryDto.getParentId());

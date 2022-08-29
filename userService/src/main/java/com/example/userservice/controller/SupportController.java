@@ -31,10 +31,10 @@ public class SupportController {
         return ResponseEntity.status(response.isSuccess()? HttpStatus.OK:HttpStatus.CONFLICT).body(response);
     }
     @GetMapping
-    public ResponseEntity<?> getAllSupport(@RequestParam(defaultValue = "null",required = false) SupportType supportType){
+    public ResponseEntity<?> getAllSupport(@RequestParam(required = false) SupportType supportType){
         ApiResponse response=supportService.getAll(supportType);
         return ResponseEntity.ok(response);
-    }//todo
+    }
     @GetMapping("/{id}")
     public ResponseEntity<?> getOneSupport(@PathVariable Long id){
         ApiResponse response=supportService.getOne(id);

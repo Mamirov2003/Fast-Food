@@ -2,6 +2,7 @@ package com.example.userservice.controller;
 
 import com.example.userservice.dto.ApiResponse;
 import com.example.userservice.dto.OrderHistoryDto;
+import com.example.userservice.dto.OrderWHistoryDto;
 import com.example.userservice.entity.enums.OrderStatus;
 import com.example.userservice.service.OrderHistoryService;
 import lombok.RequiredArgsConstructor;
@@ -36,8 +37,8 @@ public class OrderHistoryController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> editOrderHistory(@PathVariable Long id,@RequestBody OrderHistoryDto orderHistoryDto){
-        ApiResponse response=orderHistoryService.edit(id,orderHistoryDto);
+    public ResponseEntity<?> editOrderHistory(@PathVariable Long id,@RequestBody OrderHistoryDto orderHistoryDto,@RequestBody(required = false) OrderWHistoryDto orderWHistoryDto){
+        ApiResponse response=orderHistoryService.edit(id,orderHistoryDto,orderWHistoryDto);
         return ResponseEntity.status(response.isSuccess()? HttpStatus.OK:HttpStatus.CONFLICT).body(response);
     }
 }

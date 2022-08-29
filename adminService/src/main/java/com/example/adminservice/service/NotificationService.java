@@ -28,8 +28,7 @@ public class NotificationService {
     public ApiResponse save(NotificationDto notificationDto) {
         String saved = "Saved!";
         Notification notification = new Notification();
-        notification.setNameUz(notificationDto.getNameUz());
-        notification.setNameRu(notificationDto.getNameRu());
+        notification.setName(notificationDto.getNameUz());
         notification.setTitle(notificationDto.getTitle());
         notification.setBody(notificationDto.getBody());
         notification.setHasBot(notificationDto.isHasBot());

@@ -1,6 +1,6 @@
 package com.example.kitchenservice.controller;
 
-import com.example.kitchenservice.client.FeignUser;
+import com.example.kitchenservice.controller.client.FeignUser;
 import com.example.kitchenservice.entity.enums.OrderStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

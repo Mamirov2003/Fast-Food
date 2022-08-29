@@ -27,8 +27,8 @@ public class AbsNameEntity {
     private boolean deleted = false;
     private boolean status = true;
 
-    public AbsNameEntity(Long id, String nameUz, String nameRu) {
+    public AbsNameEntity(Long id, String name) {
         this.id = id;
-        this.name = nameRu;
+        this.name = name;
     }
 }

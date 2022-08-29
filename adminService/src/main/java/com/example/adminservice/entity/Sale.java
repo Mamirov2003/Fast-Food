@@ -29,8 +29,8 @@ public class Sale extends AbsNameEntity {
     private Double summa;
     private Double foiz;
 
-    public Sale(Long id, String nameUz, String nameRu, Timestamp start, Timestamp end, Double summa, Double foiz) {
-        super(id, nameUz, nameRu);
+    public Sale(Long id, String name, Timestamp start, Timestamp end, Double summa, Double foiz) {
+        super(id, name);
         this.start = start;
         this.end = end;
         this.summa = summa;

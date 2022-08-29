@@ -45,9 +45,9 @@ public class UserController {
         return ResponseEntity.ok(response);
     }//done
     @GetMapping
-    public ResponseEntity<?> getAllUsers(@RequestParam(defaultValue = "null",required = false) String role,
-                                         @RequestParam(defaultValue = "null",required = false)Boolean online){
+    public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String role,
+                                         @RequestParam(required = false)Boolean online){
         ApiResponse response=userService.getAll(role,online);
         return ResponseEntity.ok(response);
-    }//??? bad request required iwlamayapt
+    }
 }

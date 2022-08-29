@@ -12,6 +12,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 /**
  * @author "ISMOIL NIGMATOV"
  * @created 9:43 PM on 8/14/2022
@@ -42,7 +44,7 @@ public class SupportService {
     public ApiResponse getAll(SupportType supportType) {
         Pageable pageable= PageRequest.of(0,10);
         Page<Support> data=null;
-        if (supportType.equals("null")) data=supportRepository.findAll(pageable);
+        if (Objects.isNull(supportType)) data=supportRepository.findAll(pageable);
         else data=supportRepository.findAllBySupportType(supportType,pageable);
         return ApiResponse.builder().success(true).message("There").data(data).build();
     }

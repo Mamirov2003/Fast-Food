@@ -19,8 +19,7 @@ public class AddressService {
     private final AddressRepository addressRepository;
     public ApiResponse save(AddressDto addressDto) {
         Address address = new Address();
-        address.setNameUz(addressDto.getNameUz());
-        address.setNameRu(addressDto.getNameRu());
+        address.setName(addressDto.getNameUz());
         address.setLat(addressDto.getLat());
         address.setLon(addressDto.getLon());
         address.setTarget(addressDto.getTarget());

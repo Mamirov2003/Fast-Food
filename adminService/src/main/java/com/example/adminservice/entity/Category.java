@@ -34,7 +34,7 @@ public class Category extends AbsNameEntity {
     @ManyToMany
     private List<Filial> filial;
 
-    public Category(Long id, String nameUz, String nameRu) {
-        super(id, nameUz, nameRu);
+    public Category(Long id, String name) {
+        super(id, name);
     }
 }

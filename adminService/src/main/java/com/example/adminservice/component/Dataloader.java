@@ -36,14 +36,14 @@ public class Dataloader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         if (mode.equals("always")) {
-            roleRepository.save(new Role(1l, "ADMIN","АДМИН"));
-            roleRepository.save(new Role(2l, "USER","ПОЛЬЗОВАТЕЛЬ"));
-            roleRepository.save(new Role(3l, "OPERATOR","ОПЕРАТОР"));
-            roleRepository.save(new Role(4l, "DISPECHER","ДИСПЕЧЕР"));
-            roleRepository.save(new Role(5l, "Kuryer","Курьер"));
+            roleRepository.save(new Role(1l, "ADMIN"));
+            roleRepository.save(new Role(2l, "USER"));
+            roleRepository.save(new Role(3l, "OPERATOR"));
+            roleRepository.save(new Role(4l, "DISPECHER"));
+            roleRepository.save(new Role(5l, "CURIER"));
 
-            Address qattadir = addressRepository.save(new Address(1l,"Qattadir","где-то",123D, 321D, "Qattadir"));
-            Address qatdir = addressRepository.save(new Address(2l,"Qatdir","где-то",12345D, 54321D, "Qatdir"));
+            Address qattadir = addressRepository.save(new Address(1l,"Qattadir",123D, 321D, "Qattadir"));
+            Address qatdir = addressRepository.save(new Address(2l,"Qatdir",12345D, 54321D, "Qatdir"));
 
 
             //qolganlari xato berdi shunga commentga olib qo`ydim

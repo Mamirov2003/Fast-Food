@@ -1,6 +1,7 @@
 package com.example.courierservice.client;
 
 import com.example.courierservice.dto.OrderHistoryDto;
+import com.example.courierservice.dto.OrderWHistoryDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,5 +20,5 @@ public interface FeignUser {
     ResponseEntity<?> getOne(@PathVariable Long id);
 
     @PutMapping("/api/user/history/{id}")
-    ResponseEntity<?> edit(@PathVariable Long id, @RequestBody OrderHistoryDto orderHistoryDto);
+    ResponseEntity<?> edit(@PathVariable Long id, @RequestBody OrderWHistoryDto orderWHistoryDto);
 }

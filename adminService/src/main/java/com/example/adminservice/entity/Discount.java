@@ -31,8 +31,8 @@ public class Discount extends AbsNameEntity {
     @OneToMany(mappedBy = "discount")
     private List<Product> product;
 
-    public Discount(Long id, String nameUz, String nameRu, Double percentage, List<Product> product) {
-        super(id, nameUz, nameRu);
+    public Discount(Long id, String name, Double percentage, List<Product> product) {
+        super(id, name);
         this.percentage = percentage;
         this.product = product;
     }

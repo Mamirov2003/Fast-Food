@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 @Where(clause = "deleted=false")
 @SQLDelete(sql = "update orderHistory set deleted=true,status=false where id=?")
 public class OrderHistory extends AbsEntity {
-    @JsonIgnore
+
     @ManyToOne
     private Filial filial;
 

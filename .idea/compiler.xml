@@ -19,12 +19,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adminService" target="11" />
-      <module name="botService" target="11" />
+      <module name="botService" target="17" />
       <module name="courierService" target="11" />
       <module name="discovery" target="11" />
       <module name="gateway" target="11" />
       <module name="kitchenService" target="11" />
       <module name="operatorService" target="11" />
+      <module name="tiktok" target="11" />
       <module name="userService" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -37,6 +38,7 @@
       <module name="gateway" options="-parameters" />
       <module name="kitchenService" options="-parameters" />
       <module name="operatorService" options="-parameters" />
+      <module name="tiktok" options="-parameters" />
       <module name="userService" options="-parameters" />
     </option>
   </component>

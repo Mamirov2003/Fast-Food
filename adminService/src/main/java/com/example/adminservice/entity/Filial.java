@@ -36,8 +36,8 @@ public class Filial extends AbsNameEntity {
     @OneToMany(mappedBy = "filial")
     private List<User> user;
 
-    public Filial(Long id, String nameUz, String nameRu, Date startTime, Date endTime, Address address) {
-        super(id, nameUz, nameRu);
+    public Filial(Long id, String name, Date startTime, Date endTime, Address address) {
+        super(id, name);
         this.startTime = startTime;
         this.endTime = endTime;
         this.address = address;

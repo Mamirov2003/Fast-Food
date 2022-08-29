@@ -6,6 +6,7 @@ import com.example.userservice.entity.Order;
 import com.example.userservice.entity.OrderHistory;
 import com.example.userservice.entity.enums.OrderStatus;
 import com.example.userservice.repository.OrderHistoryRepository;
+import com.example.userservice.repository.OrderRepository;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -29,6 +31,7 @@ import java.util.stream.Collectors;
 public class OrderHistoryService {
     private final OrderHistoryRepository orderHistoryRepository;
     private final UserRepository userRepository;
+    private final OrderRepository orderRepository;
 
     public ApiResponse getAll(OrderStatus orderStatus) {
         Page<OrderHistory> histories=null;
@@ -73,30 +76,49 @@ public class OrderHistoryService {
         return ApiResponse.builder().data(orderHistoryToDto(orderHistory)).message("There").success(true).build();
     }
 
-    public ApiResponse edit(Long id, OrderHistoryDto orderHistoryDto) {
+    public ApiResponse edit(Long id, OrderHistoryDto orderHistoryDto,OrderWHistoryDto orderWHistoryDto) {
         OrderHistory orderHistory = orderHistoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Not Found"));
-        try {
+        if (!(Objects.isNull(orderHistoryDto))) {
+            try {
 //            orderHistory.setReliability(orderHistoryDto.getReliability());
-        }catch (Exception e){
-            log.error(String.valueOf(e));
+            } catch (Exception e) {
+                log.error(String.valueOf(e));
+            }
+            try {
+                orderHistory.setDescription(orderHistoryDto.getDescription());
+            } catch (Exception e) {
+                log.error(String.valueOf(e));
+            }
+            try {
+                orderHistory.setCourier(userRepository.findById(orderHistoryDto.getCourierId()).orElseThrow(() -> new RuntimeException("Not Found")));
+            } catch (Exception e) {
+                log.error(String.valueOf(e));
+            }
+            try {
+                orderHistoryRepository.save(orderHistory);
+            } catch (Exception e) {
+                log.error(String.valueOf(e));
+            }
+        } else {
+            try {
+                Order order = orderHistory.getOrder();
+                order.setOrderStatus(orderWHistoryDto.getOrderStatus());
+                orderRepository.save(order);
+            }catch (Exception e){
+                log.error(String.valueOf(e));
+            }
+            try {
+                orderHistory.setDeliveredPrice(orderWHistoryDto.getPrice());
+            }catch (Exception e){
+                log.error(String.valueOf(e));
+            }
+            try {
+                orderHistory.setDeliveredTime(orderWHistoryDto.getTimestamp());
+                orderHistoryRepository.save(orderHistory);
+            }catch (Exception e){
+                log.error(String.valueOf(e));
+            }
         }
-        try {
-            orderHistory.setDescription(orderHistoryDto.getDescription());
-        }catch (Exception e){
-            log.error(String.valueOf(e));
-        }
-        try {
-            orderHistory.setCourier(userRepository.findById(orderHistoryDto.getCourierId()).orElseThrow(() -> new RuntimeException("Not Found")));
-        }catch (Exception e){
-            log.error(String.valueOf(e));
-        }
-        try {
-            orderHistory.setDeliveredTime(orderHistoryDto.getTimestamp());
-            orderHistoryRepository.save(orderHistory);
-        }catch (Exception e){
-            log.error(String.valueOf(e));
-        }
-
         return ApiResponse.builder().success(true).message("Edited").build();
 
     }

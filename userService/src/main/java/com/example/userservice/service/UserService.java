@@ -15,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -72,12 +73,14 @@ public class UserService {
         return ApiResponse.builder().message("Deleted").success(true).build();
     }
     public ApiResponse edit(Long id, UserDto userDto,Boolean online) {
-        if (!(online.equals(null))){
+        if (String.valueOf(online)!="null"){
             Optional<User> optionalUser = userRepository.findById(id);
             if (optionalUser.isEmpty()) return ApiResponse.builder().success(false).message("User Not Found").build();
 
             User user = optionalUser.get();
             user.setOnline(online);
+            userRepository.save(user);
+            return ApiResponse.builder().success(true).message("Edited!").build();
         }
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isEmpty()) return ApiResponse.builder().success(false).message("User Not Found").build();
@@ -121,9 +124,9 @@ public class UserService {
     public ApiResponse getAll(String role,Boolean online) {
         Pageable pageable= PageRequest.of(0,10);
         Page<User> data= null;
-        if ((role.equals(null))&&(String.valueOf(online).equals("null"))){
+        if ((Objects.isNull(role) &&(Objects.isNull(online)))){
           data = userRepository.findAll(pageable);//for Admin
-        }
+        }else
         data = userRepository.findAllByRole_NameContainingIgnoreCaseAndOnline(role,online,pageable);//for operator
 
         return ApiResponse.builder().success(true).message("There").data(toDTOPage(data)).build();
