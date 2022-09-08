@@ -20,6 +20,7 @@
     <bytecodeTargetLevel>
       <module name="adminService" target="11" />
       <module name="botService" target="17" />
+      <module name="botService (1)" target="17" />
       <module name="courierService" target="11" />
       <module name="discovery" target="11" />
       <module name="gateway" target="11" />
@@ -33,6 +34,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="adminService" options="-parameters" />
       <module name="botService" options="-parameters" />
+      <module name="botService (1)" options="-parameters" />
       <module name="courierService" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
