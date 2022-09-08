@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +24,26 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class AttachmentService {
     private final AttachmentRepository attachmentRepository;
+
+    private final Path root = Paths.get("D:\\Java\\Fast Food\\botService\\src\\main\\resources\\upload");
+    @SneakyThrows
+    public ApiResponse uploadFileSystem(MultipartHttpServletRequest request) {
+
+        Iterator<String> fileNames = request.getFileNames();
+        Attachment save = null;
+        while (fileNames.hasNext()) {
+            Attachment attachment = new Attachment();
+            MultipartFile file = request.getFile(fileNames.next());
+            attachment.setFileName(file.getOriginalFilename());
+            attachment.setContentType(file.getContentType());
+            attachment.setSize(file.getSize());
+
+            Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
+            attachment.setUrl(this.root+"\\" + file.getOriginalFilename());
+            save = attachmentRepository.save(attachment);
+        }
+        return ApiResponse.builder().success(true).message(save.getFileName() + " nomli fayl saqlandi").build();
+    }
 
     @SneakyThrows
     public ApiResponse uploadDB(MultipartHttpServletRequest request) {
