@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 5:24 PM on 8/18/2022
- * @project fast-food
- */
 @FeignClient(name = "userService",url = "http://localhost:8081")
 public interface FeignUser {
     @GetMapping("/api/user/order")

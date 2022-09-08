@@ -6,11 +6,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:25 PM on 8/18/2022
- * @project fast-food
- */
 @FeignClient(name = "userService",url = "http://localhost:8081")
 public interface FeignUser {
     @PutMapping("/api/user/user/{id}")

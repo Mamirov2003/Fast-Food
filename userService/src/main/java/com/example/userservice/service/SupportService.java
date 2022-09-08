@@ -14,11 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:43 PM on 8/14/2022
- * @project fast-food
- */
 @Service
 @Slf4j
 public class SupportService {

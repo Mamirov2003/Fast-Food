@@ -6,11 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 12:31 PM on 8/11/2022
- * @project fast-food
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

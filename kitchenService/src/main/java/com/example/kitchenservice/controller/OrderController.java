@@ -6,11 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 10:23 AM on 8/16/2022
- * @project fast-food
- */
 @RestController
 @RequestMapping("/order")
 @RequiredArgsConstructor

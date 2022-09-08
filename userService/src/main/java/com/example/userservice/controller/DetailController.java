@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 12:26 PM on 8/11/2022
- * @project fast-food
- */
 @RestController
 @RequestMapping("/detail")
 public class DetailController {

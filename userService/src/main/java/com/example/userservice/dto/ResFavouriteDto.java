@@ -6,11 +6,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:20 PM on 8/14/2022
- * @project fast-food
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

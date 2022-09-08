@@ -19,12 +19,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 11:25 PM on 8/10/2022
- * @project fast-food
- */
-
 @Service
 @Slf4j
 public class UserService {

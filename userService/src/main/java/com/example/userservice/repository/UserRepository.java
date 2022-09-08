@@ -9,11 +9,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 11:25 PM on 8/10/2022
- * @project fast-food
- */
 public interface UserRepository extends JpaRepository<User,Long> {
     @Query("select u from users u where upper(u.role.name) like upper(concat('%', ?1, '%')) and u.online = ?2")
     Page<User> findAllByRole_NameContainingIgnoreCaseAndOnline(String role, Boolean online, Pageable pageable);

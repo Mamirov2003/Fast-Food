@@ -1,11 +1,5 @@
 package com.example.kitchenservice.entity;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:47 AM on 8/3/2022
- * @project adminService
- */
-
 import com.example.kitchenservice.entity.templete.AbsNameEntity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;

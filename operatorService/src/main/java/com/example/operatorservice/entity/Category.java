@@ -1,10 +1,5 @@
 package com.example.operatorservice.entity;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:47 AM on 8/3/2022
- * @project adminService
- */
 
 import com.example.operatorservice.entity.templete.AbsNameEntity;
 import lombok.*;

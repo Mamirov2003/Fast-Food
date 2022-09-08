@@ -18,11 +18,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:49 PM on 8/11/2022
- * @project fast-food
- */
 @Service
 //@Slf4j
 @RequiredArgsConstructor

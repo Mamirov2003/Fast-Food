@@ -20,11 +20,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:16 PM on 8/19/2022
- * @project fast-food
- */
 @Service
 @RequiredArgsConstructor
 @Slf4j

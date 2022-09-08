@@ -8,11 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:01 PM on 8/11/2022
- * @project fast-food
- */
 public interface OrderHistoryRepository extends JpaRepository<OrderHistory,Long> {
    Page<OrderHistory>findAllByOrder_OrderStatus(OrderStatus order_orderStatus, Pageable pageable);
 }

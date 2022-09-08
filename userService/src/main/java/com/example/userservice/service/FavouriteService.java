@@ -23,11 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:12 PM on 8/13/2022
- * @project fast-food
- */
 @Service
 @Slf4j
 public class FavouriteService {

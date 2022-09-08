@@ -12,12 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 11:24 PM on 8/10/2022
- * @project fast-food
- */
-
 @RestController
 @RequestMapping("/user")
 public class UserController {

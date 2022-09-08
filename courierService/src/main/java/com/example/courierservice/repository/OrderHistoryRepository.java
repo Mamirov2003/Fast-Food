@@ -6,11 +6,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 5:17 PM on 8/16/2022
- * @project fast-food
- */
 public interface OrderHistoryRepository extends JpaRepository<OrderHistory,Long> {
     @Query("select o from OrderHistory o where o.courier.id = ?1")
     Page<OrderHistory> findAllByCourier_Id(Long id, Pageable pageable);

@@ -4,11 +4,6 @@ import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 11:30 PM on 8/10/2022
- * @project fast-food
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

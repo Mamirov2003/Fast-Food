@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:48 PM on 8/11/2022
- * @project fast-food
- */
 
 @RestController
 @RequestMapping("/order")

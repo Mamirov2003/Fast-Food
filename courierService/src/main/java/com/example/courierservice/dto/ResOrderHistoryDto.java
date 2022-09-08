@@ -5,11 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 5:24 PM on 8/16/2022
- * @project fast-food
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

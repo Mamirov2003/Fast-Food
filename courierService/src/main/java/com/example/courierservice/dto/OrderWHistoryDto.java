@@ -8,12 +8,6 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:59 PM on 8/26/2022
- * @project fast-food
- */
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

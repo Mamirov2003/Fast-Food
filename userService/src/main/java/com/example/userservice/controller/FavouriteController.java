@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:11 PM on 8/13/2022
- * @project fast-food
- */
 @RestController
 @RequestMapping("/favourite")
 public class FavouriteController {

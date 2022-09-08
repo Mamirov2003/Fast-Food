@@ -13,11 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 8:35 PM on 8/18/2022
- * @project fast-food
- */
 @Service
 @RequiredArgsConstructor
 public class CourierService {

@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/adminService/adminService.iml" filepath="$PROJECT_DIR$/adminService/adminService.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../fast_food/fast_food/botService/botService.iml" filepath="$PROJECT_DIR$/../fast_food/fast_food/botService/botService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fast-food/botService/botService.iml" filepath="$PROJECT_DIR$/../fast-food/botService/botService.iml" />
       <module fileurl="file://$PROJECT_DIR$/courierService/courierService.iml" filepath="$PROJECT_DIR$/courierService/courierService.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />

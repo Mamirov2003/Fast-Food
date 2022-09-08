@@ -11,11 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 6:50 PM on 8/11/2022
- * @project fast-food
- */
 @Repository
 public interface OrderRepository extends JpaRepository<Order ,Long> {
     Page<Order> findAllByOrderStatus(OrderStatus orderStatus,Pageable pageable);

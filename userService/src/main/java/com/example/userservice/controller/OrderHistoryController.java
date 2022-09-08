@@ -11,11 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:15 PM on 8/19/2022
- * @project fast-food
- */
 
 @RestController
 @RequestMapping("/history")

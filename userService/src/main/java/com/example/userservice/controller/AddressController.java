@@ -9,11 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author "ISMOIL NIGMATOV"
- * @created 9:31 PM on 8/14/2022
- * @project fast-food
- */
 @RequestMapping("address")
 @RestController
 public class AddressController {

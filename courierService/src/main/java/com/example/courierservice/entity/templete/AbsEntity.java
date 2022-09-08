@@ -11,11 +11,6 @@ import org.springframework.data.annotation.LastModifiedBy;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:29 AM on 8/3/2022
- * @project adminService
- */
 @Getter
 @Setter
 @NoArgsConstructor
