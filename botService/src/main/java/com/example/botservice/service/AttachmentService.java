@@ -18,7 +18,7 @@ import java.util.Iterator;
 @RequiredArgsConstructor
 public class AttachmentService {
     private final AttachmnetRepository attachmnetRepository;
-    private final Path root = Paths.get("D:\\Java\\fast-food\\botService\\src\\main\\resources");
+    private final Path root = Paths.get("D:\\Java\\Fast Food\\botService\\src\\main\\resources\\upload");
     @SneakyThrows
     public ApiResponse uploadFileSystem(MultipartHttpServletRequest request) {
 
