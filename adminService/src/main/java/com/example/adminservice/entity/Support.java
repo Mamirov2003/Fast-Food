@@ -1,11 +1,5 @@
 package com.example.adminservice.entity;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:47 AM on 8/3/2022
- * @project adminService
- */
-
 import com.example.adminservice.entity.enums.SupportType;
 import com.example.adminservice.entity.templete.AbsNameEntity;
 import lombok.*;

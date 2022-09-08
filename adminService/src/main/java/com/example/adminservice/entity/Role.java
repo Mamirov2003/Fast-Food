@@ -11,11 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import java.util.List;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:50 AM on 8/3/2022
- * @project adminService
- */
 @Entity(name = "roles")
 @AllArgsConstructor
 @NoArgsConstructor

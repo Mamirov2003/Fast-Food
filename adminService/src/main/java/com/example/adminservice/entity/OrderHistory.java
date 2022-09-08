@@ -11,11 +11,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import java.sql.Timestamp;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:09 AM on 8/4/2022
- * @project AdminService
- */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

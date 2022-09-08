@@ -9,11 +9,6 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:48 AM on 8/3/2022
- * @project adminService
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

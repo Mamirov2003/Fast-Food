@@ -7,12 +7,6 @@ import javax.persistence.*;
 
 import java.util.List;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 10:51 AM on 8/4/2022
- *
- * @project AdminService
- */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

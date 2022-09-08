@@ -8,11 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:22 AM on 8/4/2022
- * @project AdminService
- */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

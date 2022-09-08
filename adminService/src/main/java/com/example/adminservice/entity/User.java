@@ -18,11 +18,6 @@ import java.util.List;
 import java.util.logging.SimpleFormatter;
 import java.util.stream.Collectors;
 
-/**
- * @author "Husniddin Ulachov"
- * @created 11:23 AM on 8/3/2022
- * @project adminService
- */
 @Entity(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
