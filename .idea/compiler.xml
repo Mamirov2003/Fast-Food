@@ -19,7 +19,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adminService" target="11" />
-      <module name="botService" target="17" />
+      <module name="botService" target="11" />
       <module name="botService (1)" target="17" />
       <module name="courierService" target="11" />
       <module name="discovery" target="11" />
